@@ -1,0 +1,69 @@
+﻿#aheader {
+    width: 900px;
+    height: 120px;
+    border: 1px solid #ccc;
+    font-weight: 700;
+    text-align: center;
+    font-size: xx-large;
+    margin: 0px auto 10px auto;
+}
+body {
+    background-color: #ecf5ff;
+}
+#main {
+    width: 900px;
+    height: 500px;
+    border: 0px solid red;
+    margin: 0 auto 0 auto;
+}
+#menu {
+    width: 230px;
+    height: 500px;
+    border: 0px solid green;
+    float: right;
+}
+.tbl {
+    width: 100%;
+    border: 1px solid #6699ff;
+}
+.tblhead {
+    height: 35px;
+    font-size: medium;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #2d71ff;
+    text-align: center;
+}
+.btnmenu {
+    width: 225px;
+    height: 35px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #6699ff;
+    margin: 1px;
+    font-size:medium;
+    font-weight:bold;
+    color:#fff;
+}
+#cnt {
+    width: 665px;
+    height: 500px;
+    border: 0px solid green;
+    float: left;
+}
+.lbl {
+    color: #004ae6;
+    text-align: left;
+}
+.txt {
+    width: 160px;
+    height: 22px;
+    border: 1px solid #27f;
+}
+.btn {
+    width: 100px;
+    height: 30px;
+    background-color: #6699ff;
+    font-size: 14px;
+    color: #fff;
+}
