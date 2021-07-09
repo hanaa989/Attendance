@@ -1,12 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.master" AutoEventWireup="true" CodeFile="AddStd.aspx.cs" Inherits="Admin_AddStd" %>
 
-<script runat="server">
-
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-</script>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -48,7 +41,7 @@
                     <tr>
                         <td class="lbl">&nbsp;</td>
                         <td>
-                            <asp:Button ID="BtnAddStd" runat="server" CssClass="btn" Text="اضافة" />
+                            <asp:Button ID="BtnAddStd" runat="server" CssClass="btn" Text="اضافة" OnClick="BtnAddStd_Click" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -62,11 +55,12 @@
                     <tr>
                         <td class="lbl">&nbsp;</td>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style1" Width="331px">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style1" Width="331px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
                                 <Columns>
-                                    <asp:BoundField DataField="SID" HeaderText="SID" InsertVisible="False" ReadOnly="True" SortExpression="SID" />
-                                    <asp:BoundField DataField="StdName" HeaderText="StdName" SortExpression="StdName" />
-                                    <asp:BoundField DataField="EntryDate" HeaderText="EntryDate" SortExpression="EntryDate" />
+                                    <asp:BoundField DataField="SID" HeaderText="الرقم" InsertVisible="False" ReadOnly="True" SortExpression="SID" />
+                                    <asp:BoundField DataField="StdName" HeaderText="اسم الشعبة" SortExpression="StdName" />
+                                    <asp:BoundField DataField="EntryDate" HeaderText="التاريخ" SortExpression="EntryDate" />
+                                    <asp:CommandField DeleteText="حذف" EditText="تحرير" ShowDeleteButton="True" ShowEditButton="True" />
                                 </Columns>
                                 <FooterStyle BackColor="White" ForeColor="#000066" />
                                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
